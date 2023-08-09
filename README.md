@@ -1,1 +1,1 @@
-# Inventroy-Tracker
+# Inventory-Tracker
