@@ -17,8 +17,8 @@
 - Django ( Chosen due to it's built in features that I think would be helfpul in this case.)
 - FastAPI (I may decide to use FastAPI as well, but this is still preliminary.)
 
-  # Frontend (React)
+# Frontend (React)
   - The goal is to create a login screen that will allow users to login in to the application.
-  - There will also be a basic display that will show current product levels. 
-
-  # Version Control (Git, Github)
+  - There will also be a basic display that will show current product levels.
+    
+# Version Control (Git, Github)
