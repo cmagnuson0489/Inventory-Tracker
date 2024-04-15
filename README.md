@@ -14,7 +14,7 @@
 - Track current inventory.
 - Determine when is the optimal time to reorder.
 - Place reorders.
-- Django ( Chosen due to it's built in features that I think would be helfpul in this case.)
+- Flask (Chosen due to it's built in features that I think would be helfpul in this case.)
 - FastAPI (I may decide to use FastAPI as well, but this is still preliminary.)
 
 # Frontend (React)
