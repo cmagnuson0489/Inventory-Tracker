@@ -1,8 +1,29 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
+from werkzeug.security import check_password_hash
 from flask_restful import Resource, Api
 
 app = Flask(__name__)
 api = Api(app)
+
+users = {
+    'user1': {
+        'username': 'user1',
+        'password_hash': 'hash_of_the_password'
+    }
+}
+
+@app.route('/api/login', methods=['POST'])
+def login():
+    data = request.json
+    username = data.get('username')
+    password = data.get('password')
+    
+    user = users.get(username)
+    if not user:
+        return jsonify({'message': 'User not found'}), 404
+    if not check_password_hash(user['password_hash'], password):
+        return jsonify({'message': 'Incorrect password'}), 401
+    return jsonify({'message': "Login successful"}), 200
 
 #Mock Database. More logic to come
 
@@ -39,7 +60,7 @@ class Inventory(Resource):
 
             #Next we need to check if the reorder is necessary
 
-            if inventory_database[product_id['quantity'] < minimum_amount:
+            if inventory_database[product_id['quantity']]< minimum_amount:
                 self.place_reorder(product_id)
 
             return inventory_database[product_id], 200
