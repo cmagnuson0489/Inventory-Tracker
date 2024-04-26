@@ -1,4 +1,9 @@
-from app import app
+from flask import Flask
+app = Flask(__name__)
 
+@app.route('/')
+
+def hello():
+    return "Hello from Flask!"
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=5000) #Ensuring Flask runs on port 5000
