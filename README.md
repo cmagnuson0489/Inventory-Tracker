@@ -19,6 +19,6 @@
 
 # Frontend (React)
   - The goal is to create a login screen that will allow users to login in to the application.
-  - There will also be a basic display that will show current product levels.
+  - There will also be a basic display that will show current product levels for that specific user. 
     
 # Version Control (Git, Github)
