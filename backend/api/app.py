@@ -20,7 +20,7 @@ app.url_map.strict_slashes = False
 app.config["JWT_SECRET_KEY"] = os.environ.get('JWT_SECRET')
 jwt = JWTManager(app)
 
-#database configuration
+#database configuration setup
 if os.getenv("DATABASE_URL") is not None:
     app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 else:
