@@ -9,8 +9,8 @@ def admin_setup(app):
     app.config['FLASK_ADMIN_SWATCH'] = 'cerulean'
     admin = Admin(app, name='inventory admin', template_nodes='bootstrap3')
     
-    # Here is where we add our models
+    # Here is where we will add our models
     admin.add_view(ModelView(User, db.session))
     
-    # You can duplicate that line to add new models
+    # This line can be duplicated to add new models
     # admin.add_view(ModelView(YourModelName, db.session))
